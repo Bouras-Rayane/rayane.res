@@ -1,0 +1,34 @@
+body{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHCKqhwpR2_W7AhNT1unL92gfBeUwBAoxKLTwBhpQOsLnlkyAJ0-NqFOhBoceq32gaHB8&usqp=CAU);
+    background-size: cover;
+   
+
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.DZ{
+    color: white;
+    font-size: 300%;
+    width: 50%;
+
+}
+.alg{
+background-color: green;
+color: white;
+border: none;
+padding: 15px 20PX;
+border-radius: 5px;
+font-size: 15px
+}
+.dz{
+    color: green;
+    border: none;
+    padding: 15px 20px ;
+    border-radius: 5px;
+    font-size: 20px;
+
+}
