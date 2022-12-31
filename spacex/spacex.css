@@ -1,0 +1,123 @@
+@font-face {
+    font-family: 'D-DIN-Bold';
+    src: url('/fonts/D-DIN-Bold.otf')format("opentype");
+}
+@font-face {
+    font-family: 'D-DIN';
+    src: url('/fonts/D-DIN.otf')format("opentype");
+}
+
+* {
+    font-family: 'D-DIN-Bold';
+    margin: 0;
+}
+
+section {
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-end;
+}
+
+#main {
+    background-image: url(pic1.jpg);
+}
+#second {
+    background-image: url(pic2.jpg);
+}
+#third {
+    background-image: url(pic3.jpg);
+}
+#fourth {
+    background-image: url(pic4.webp);
+}
+#fifth {
+    background-image: url(pic5.webp);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    text-transform: uppercase;
+}
+
+#nav-links {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav a {
+    color: white;
+    margin: 0 5px;
+    font-size: 15px;
+}
+
+nav img {
+    width: 200px;
+    margin-right: 100px;
+}
+
+
+.content {
+    color: white;
+    text-transform: uppercase;
+    margin: 100px;
+}
+
+.content * {
+    margin: 10px 0;
+}
+
+.content h4 {
+    font-size: 20px;
+}
+
+.content h2 {
+    font-size: 48px;
+    max-width: 700px;
+}
+
+.content button {
+    padding: 20px 60px;
+    background: none;
+    border: 1px solid white;
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.content button:hover {
+    transition: all 0.4s;
+    background: white;
+    color: black;
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 50px;
+    text-align: center;
+}
+
+footer a {
+    margin: 0 5px;
+}
+#copyright {
+    color: grey;
+    font-size: 15px;
+    text-transform: capitalize;
+}
