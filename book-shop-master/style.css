@@ -1,0 +1,65 @@
+
+body {
+    font-family: 'Montserrat', sans-serif ;
+    /* background: #FFFFE8; */
+}
+
+/* Changer le CSS des buttons de la nav */
+nav button{
+    width: 150px;
+}
+#add-btn{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+nav button, .book button,#add-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: all 0.4s;
+}
+nav button:hover, .book button:hover,#add-btn:hover{
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.903);
+    background-color: rgba(0, 0, 0, 0.903);
+    transition: all 0.4s;
+}
+
+/* Sélectionner le dernier élement séléctionné */
+nav button:last-child{
+    margin-left: 20px;
+}
+#all-h1{
+    margin-top: 10vh;
+}
+#all-books, #cheap-books,#best-books {
+    
+    display: grid;
+    grid-template-columns: repeat(4,1fr)
+}
+.book-img{
+    padding: 10px;
+    background: black;
+    margin-bottom: 20px;
+    transition: 0.5s;
+}
+.book-img:hover{
+    transform: scale(1.1);
+}
+.book {
+    padding: 20px;
+    margin: 20px;
+    background-color: #B6EADA;
+    box-shadow: 0 0 10px 1px #B6EADA;
+    text-align: center;
+}
+.book h1{
+    font-size: 28px;
+}
+.book *{
+    font-family: 'Raleway', sans-serif !important;
+    margin: 10px 0;
+}

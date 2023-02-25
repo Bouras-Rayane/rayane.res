@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Livres</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="d-flex flex-row justify-content-between align-items-center px-5 py-3">
+        <img src="/images/logo.jpg" width="80px" alt="">
+
+        <div id="btn-container">
+            <button onclick="darkMode()">Dark Mode</button>
+            <button data-bs-toggle="modal" data-bs-target="#login">Login</button>
+
+            <button data-bs-toggle="modal" data-bs-target="#register">Register</button>
+        </div>
+    </nav>
+
+    <button id="add-btn" data-bs-toggle="modal" data-bs-target="#addbook">Ajouter un livre</button>
+
+
+    <h1 id="all-h1">Touts les livres</h1>
+    <section id="all-books">
+    </section>
+
+    <section>
+        <h1>Livres pas chers</h1>
+        <div id="cheap-books"></div>
+    </section>
+    <section>
+        <h1>Livres les mieux notés</h1>
+
+        <div id="best-books"></div>
+    </section>
+
+
+
+
+
+
+    <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div>
+                            <label>Email</label>
+                            <input id="loginEmail" type="text" placeholder="Entrez votre email">
+                        </div>
+                        <div>
+                            <label>Mot de passe</label>
+                            <input id="loginPassword" type="password" placeholder="Entrez votre mot de passe">
+                        </div>
+                    </form>
+                    <div id="error"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button onclick="Login()" type="button" class="btn btn-primary">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="register" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Register</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div>
+                            <label>Nom</label>
+                            <input id="registerNom" type="text" placeholder="Entrez votre nom">
+                        </div>
+                        <div>
+                            <label>Email</label>
+                            <input id="registerEmail" type="text" placeholder="Entrez votre email">
+                        </div>
+                        <div>
+                            <label>Mot de passe</label>
+                            <input id="registerPassword" type="password" placeholder="Entrez votre mot de passe">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button onclick="Register()" type="button" class="btn btn-primary">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="addbook" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Register</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div>
+                            <label>Titre</label>
+                            <input id="titre" type="text" placeholder="Entrez le titre du livre">
+                        </div>
+                        <div>
+                            <label>Auteur</label>
+                            <input id="auteur" type="text" placeholder="Entrez le Auteur du livre">
+                        </div>
+                        <div>
+                            <label>Date de publication</label>
+                            <input id="date" type="date" placeholder="Entrez le Date de publication du livre">
+                        </div>
+                        <div>
+                            <label>Etoiles</label>
+                            <select id="stars">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label>Prix</label>
+                            <input id="prix" type="number" placeholder="Entrez le Prix du livre">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button onclick="AjouterLivre()" type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                        aria-label="Close">Ajouter un livre</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
