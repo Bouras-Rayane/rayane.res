@@ -1,0 +1,15 @@
+.App{
+    text-align: center;
+}
+.liste-livre {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.livre {
+    width: 300px;
+    background-color: #404040;
+    margin: 10px;
+    color:white;
+    text-align: center;
+}
